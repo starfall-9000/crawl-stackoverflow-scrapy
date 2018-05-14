@@ -4,6 +4,8 @@
 
 * https://manhhomienbienthuy.bitbucket.io/2015/Dec/11/web-scraping-and-crawling-with-scrapy-and-sqlalchemy.html
 
+* https://viblo.asia/p/ky-thuat-scraping-va-crawling-web-nang-cao-voi-scrapy-va-sqlalchemy-6BkGyxzeM5aV
+
 * python v2.7
 
 * scrapy v1.5.0
@@ -13,6 +15,8 @@
 * crawl data by scrapy
 
 * copy and test XPath (using Chrome)
+
+* crawl pagiation data
 
 ### command
 
@@ -29,3 +33,7 @@
 `scrapy crawl stack`
 
 `scrapy crawl stack -o items.json -t json`
+
+* generate spider:
+
+`scrapy genspider stack_crawler stackoverflow.com -t crawl`
