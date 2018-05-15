@@ -6,13 +6,15 @@
 
 * https://viblo.asia/p/ky-thuat-scraping-va-crawling-web-nang-cao-voi-scrapy-va-sqlalchemy-6BkGyxzeM5aV
 
+* https://medium.com/python-pandemonium/develop-your-first-web-crawler-in-python-scrapy-6b2ee4baf954
+
 * python v2.7
 
 * scrapy v1.5.0
 
 ### learning
 
-* crawl data by scrapy
+* crawl data by scrapy and save to db by sqlalchemy
 
 * copy and test XPath (using Chrome)
 
