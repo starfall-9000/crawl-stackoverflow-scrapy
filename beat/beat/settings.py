@@ -13,6 +13,7 @@ BOT_NAME = 'beat'
 
 SPIDER_MODULES = ['beat.spiders']
 NEWSPIDER_MODULE = 'beat.spiders'
+LOG_LEVEL = 'INFO'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import scrapy
+import json
 import pdb
 
+from beat.items import BeatItem
 
 class GetPostsBySlugSpider(scrapy.Spider):
     name = 'get_posts_by_slug'
@@ -10,5 +12,17 @@ class GetPostsBySlugSpider(scrapy.Spider):
 
     def parse(self, response):
         print("Process.." + response.url)
-        pdb.set_trace()
-        pass
+        body = json.loads(response.body)
+        data = body['data']
+        
+        for d in data:
+            item = self.parse_beat_item(d)
+            yield item
+    
+    def parse_beat_item(self, data):
+        item = BeatItem()
+        item['content'] = data['content']
+        item['publishdate'] = data['publishdate']
+        item['title'] = data['title']
+        
+        return item

@@ -20,6 +20,8 @@
 
 * crawl pagiation data
 
+* crawl data from api
+
 ### command
 
 * init project:
