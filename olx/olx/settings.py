@@ -13,7 +13,9 @@ BOT_NAME = 'olx'
 
 SPIDER_MODULES = ['olx.spiders']
 NEWSPIDER_MODULE = 'olx.spiders'
-
+LOG_LEVEL = 'INFO'
+FEED_URI = 'data/%(name)s/%(time)s.json'
+FEED_FORMAT = 'json'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'olx (+http://www.yourdomain.com)'
