@@ -1,3 +1,4 @@
+import scrapy
 from scrapy import Spider
 from scrapy.selector import Selector
 
@@ -35,7 +36,7 @@ class StackSpider(CrawlSpider):
       
       question_location = question.xpath('a[@class="question-hyperlink"]/@href').extract()[0]
       full_url = response.urljoin(question_location)
-      yield = scrapy.Request(full_url, callback=self.parse_question)
+      yield scrapy.Request(full_url, callback=self.parse_question)
   
   def parse_question(self, response):
     item = StackItem()
